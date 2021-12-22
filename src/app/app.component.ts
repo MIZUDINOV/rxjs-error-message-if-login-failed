@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { COLLAPSE } from './animation';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    animations: [COLLAPSE],
 })
 export class AppComponent {
   title = 'error-message-if-login-failed';
