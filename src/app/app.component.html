@@ -1,0 +1,11 @@
+<div *ngIf="error$ | async as error" class="error" [@collapse]>
+    {{ error }}
+</div>
+<p *ngIf="user$ | async as user; else login">Добро пожаловать, {{ user }}!</p>
+<ng-template #login>
+    <p>
+        <button [disabled]="disabled$ | async" (click)="submit$.next()">
+            Войти
+        </button>
+    </p>
+</ng-template>
